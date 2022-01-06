@@ -62,7 +62,7 @@ Function Get-ComputerInfo {
     }
 
     PROCESS {
-        Invoke-Command2 $ComputerName -ArgumentList $detailed, $win10Version {
+        Invoke-Command $ComputerName -ArgumentList $detailed, $win10Version {
             param ($detailed, $win10Version)
 
             $computer = $env:COMPUTERNAME
